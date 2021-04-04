@@ -1,4 +1,4 @@
-                                      
+
 "                           __      __(_)_ __ ___  _ __ ___
 "                           \ \    / /  | '_ ` _ \| '__/ __|
 "                             \ \/ /  | | | | | | | |  | (__
@@ -13,7 +13,13 @@ set title
 set cursorline
 "" }
 
+"" Indent {
+
 set expandtab
+"" }
+set tabstop=4
+set shiftwidth=4
+set list
 set laststatus=2
 
 "" Search {
@@ -51,6 +57,19 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-surround')
+
+"" LSP {
+call dein#add('prabirshrestha/async.vim')
+call dein#add('prabirshrestha/asyncomplete.vim')
+call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
+"" }
+
+"" go {
+call dein#add('mattn/vim-goimports')
+"" }
 
 if !has('nvim')
   call dein#add('roxma/nvim-yarp')

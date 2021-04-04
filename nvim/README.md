@@ -14,6 +14,17 @@ ln -fns ~/workspace/vim-conf/nvim/init.vim ~/.config/nvim/init.vim
 #### vim-airline
 #### vim-airline-themes
 
+## `vim-lsp`の使用方法
+`golang`のフォーマットに伴って,`vim-lsp`を導入している。
+### 1. 言語サーバーのInstall方法
+Installしたい言語のファイルを開いた状態で、`:LspInstallServer`を実行する。
+
+### 2. 言語サーバーのUnInstall方法
+不要になった言語サーバーは、`:LspUninstallServer [server-name]`で、Uninstallできる。
+
+
+
+
 ## 設定値詳細
 ### Set系
 #### `number`
