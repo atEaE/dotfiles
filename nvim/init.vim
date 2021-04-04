@@ -1,14 +1,34 @@
+"                                      _
+"                           __      __(_)_ __ ___  _ __ ___
+"                           \ \    / /  | '_ ` _ \| '__/ __|
+"                             \ \/ /  | | | | | | | |  | (__
+"                            (_) _/   |_|_| |_| |_|_|  \___|
+
+" General {{{
+
+set number
+set hlsearch
+set incsearch
+set wildmenu
+set cursorline
+set laststatus=2
+
+" }}}
+
+
 if &compatible
   set nocompatible
 endif
 
-" dein.vimの実態が存在するファイルパスを追加
+" Plugins {{{
+
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Package Install場所のRootフォルダを追加
 call dein#begin('~/.vim/dein')
 
-" Pacakge管理開始
+call dein#add('Shougo/unite.vim')
+call dein#add('preservim/nerdtree')
+
 call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 if !has('nvim')
   call dein#add('roxma/nvim-yarp')
@@ -17,6 +37,8 @@ endif
 
 call dein#end()
 
+" }}}
+
 filetype plugin indent on
 
 
@@ -24,20 +46,4 @@ filetype plugin indent on
 " :help :syntax-enable で内容を調べることができます。
 syntax enable
 
-" 検索結果のハイライト
-set hlsearch
 
-" インクリメンタルサーチの有効化(文字入力ごとに検索する)`
-set incsearch
-
-" 行番号の設定
-set number
-
-" カーソルを表示
-set cursorline
-
-" 最下行にステータス行を表示する
-set laststatus=2
-
-" コマンド補完時に候補一覧を表示
-set wildmenu
