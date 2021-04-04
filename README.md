@@ -1,4 +1,4 @@
-# Vim (https://raw.githubus    ercontent.com/Shougo/dein.vim/master/README.mdConfiguration
+# Vim 
 `vim` と `neovim`用の設定ファル情報を管理します。
 
 ## Plugin Manager のInstall
@@ -48,6 +48,13 @@ syntax enable
 "if dein#check_install()
 " call dein#install()
 "endif
+```
+
+### 3. DeinのInstall
+最後にvimを開いて、コマンドモードで下記のコマンドを実行する。  
+(Errorが発生する場合、`.vimrc` or `init.vim`に記載してスクリプトが間違っている可能性が高いので修正する。)
+```vim
+:call dein#install()
 ```
 
 ## 2. Deinを使ったPluginの管理方法
