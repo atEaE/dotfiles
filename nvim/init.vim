@@ -1,4 +1,4 @@
-"                                      _
+                                      
 "                           __      __(_)_ __ ___  _ __ ___
 "                           \ \    / /  | '_ ` _ \| '__/ __|
 "                             \ \/ /  | | | | | | | |  | (__
@@ -6,12 +6,26 @@
 
 " General {{{
 
+"" Utility {
 set number
+set wildmenu
+set title
+set cursorline
+"" }
+
+set expandtab
+set laststatus=2
+set clipboard=unnamed,unnamedplus
+
+"" Search {
 set hlsearch
 set incsearch
-set wildmenu
-set cursorline
-set laststatus=2
+"" }
+
+"" Encoding {
+set encoding=utf-8
+set fileencodings=utf-8,eucjp-ms,sjis,cp932
+"" }
 
 " }}}
 
@@ -28,6 +42,8 @@ call dein#begin('~/.vim/dein')
 
 call dein#add('Shougo/unite.vim')
 call dein#add('preservim/nerdtree')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 
 call dein#add('~/.vim/dein/repos/github.com/Shougo/dein.vim')
 if !has('nvim')
@@ -41,6 +57,13 @@ call dein#end()
 
 filetype plugin indent on
 
+" vim-airline/vim-airline {{{
+let g:airline_theme = 'wombat'
+
+" extensions
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+" }}}
 
 "シンタックスハイライトを有効化 
 " :help :syntax-enable で内容を調べることができます。

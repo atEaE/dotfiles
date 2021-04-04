@@ -8,7 +8,13 @@
 ln -fns ~/workspace/vim-conf/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
-## 各種設定値
+## Plugin詳細
+#### Unite.vim
+#### NERDTree
+#### vim-airline
+#### vim-airline-themes
+
+## 設定値詳細
 ### Set系
 #### `number`
 行番号表示を有効化します。
