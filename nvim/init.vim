@@ -50,6 +50,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+call dein#add('tpope/vim-fugitive')
 
 if !has('nvim')
   call dein#add('roxma/nvim-yarp')
