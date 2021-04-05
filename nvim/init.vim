@@ -41,6 +41,13 @@ endif
 
 " }}}
 
+" KeyMap(noremap) {{{
+inoremap { {}<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+" }}}
 
 " Plugins {{{
 
