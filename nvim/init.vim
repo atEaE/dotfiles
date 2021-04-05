@@ -11,16 +11,15 @@ set number
 set wildmenu
 set title
 set cursorline
+set laststatus=2
 "" }
 
 "" Indent {
-
 set expandtab
-"" }
 set tabstop=4
 set shiftwidth=4
 set list
-set laststatus=2
+"" }
 
 "" Search {
 set hlsearch
@@ -36,12 +35,12 @@ set fileencodings=utf-8,eucjp-ms,sjis,cp932
 set clipboard=unnamed,unnamedplus
 "" }
 
-" }}}
-
-
 if &compatible
   set nocompatible
 endif
+
+" }}}
+
 
 " Plugins {{{
 
@@ -58,6 +57,19 @@ call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-commentary')
+call dein#add('ryanoasis/vim-devicons')
+
+
+"" Template {
+call dein#add('mattn/vim-sonictemplate')
+let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
+"" }
+
+"" Markdown {
+call dein#add('previm/previm')
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+"" }
 
 "" LSP {
 call dein#add('prabirshrestha/async.vim')
@@ -65,6 +77,7 @@ call dein#add('prabirshrestha/asyncomplete.vim')
 call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 call dein#add('prabirshrestha/vim-lsp')
 call dein#add('mattn/vim-lsp-settings')
+call dein#add('mattn/vim-lsp-icons')
 "" }
 
 "" go {

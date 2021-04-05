@@ -9,10 +9,24 @@ ln -fns ~/workspace/vim-conf/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
 ## Plugin詳細
-#### Unite.vim
-#### NERDTree
-#### vim-airline
-#### vim-airline-themes
+#### 1. Unite.vim
+#### 2. NERDTree
+#### 3. vim-airline
+#### 4. vim-airline-themes
+#### 5. ryanoasis/vim-devicons
+PluginをInstallするだけではiconは表示されない。iconの元となるFontsを事前にInstallしておく必要がある。  
+事前にFontsをInstallしておかないと、`?`で文字化けしてしまう。  
+![unknown-icons](./imgs/unknown-icons.png)  
+FontsのInstall方法は、[nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)を参照する。  
+1. FontsのInstall  
+    macOS  
+    ```sh
+    cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    ```
+
+2. Fontsの適用  
+    Neovimは、Ternminal上で動作するため、InstallしたFontsをTerminalに対して適用しておく必要がある。
+    iTerm2 > Preferences > Profilesdsas
 
 ## `vim-lsp`の使用方法
 `golang`のフォーマットに伴って,`vim-lsp`を導入している。
@@ -21,9 +35,6 @@ Installしたい言語のファイルを開いた状態で、`:LspInstallServer`
 
 ### 2. 言語サーバーのUnInstall方法
 不要になった言語サーバーは、`:LspUninstallServer [server-name]`で、Uninstallできる。
-
-
-
 
 ## 設定値詳細
 ### Set系
