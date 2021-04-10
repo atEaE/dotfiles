@@ -11,24 +11,50 @@
 " General {{{
 
 "" Utility {
+"!! 左側に行番を表示させます。
 set number
 set wildmenu
 set title
+"!! 選択している行にカーソルラインを表示します。
 set cursorline
+"!!
+"!! 行末に常にステータスバーを表示させます。
 set laststatus=2
+"!!
+"!! マウス操作を有効にします。これにより、ホイールスクロール、ファイルセレクトが可能になります。
 set mouse=a
+"!!
+"!! 複数ファイルの編集を可能にする
+set hidden
+"!!
+"!! 内容が変更された場合、自動的に再読み込み
+set autoread
 "" }
 
 "" Indent {
+"!! Tab入力時にTab文字ではなく半角文字を挿入する。
 set expandtab
+"!!
+"!! Tab幅を半角スペース4に設定する。
 set tabstop=4
+"!!
+"!! 自動インデント幅を半角スペース4に設定する。
 set shiftwidth=4
 set list
 "" }
 
 "" Search {
+"!! 検索文字をハイライトします。
 set hlsearch
+"!!
+"!! インクリメンタルサーチ(文字が入力されるたびに検索を行う)を有効にします。
 set incsearch
+"!!
+"!! 大文字小文字を区別しない。
+set ignorecase
+"!!
+"!! 大文字で検索された場合、対象を大文字に限定する。
+set smartcase
 "" }
 
 "" Encoding {
@@ -40,6 +66,10 @@ set fileencodings=utf-8,eucjp-ms,sjis,cp932
 set clipboard=unnamed,unnamedplus
 "" }
 
+"" Color {
+
+"" }
+
 if &compatible
   set nocompatible
 endif
@@ -47,12 +77,22 @@ endif
 " }}}
 
 " KeyMap(noremap) {{{
+"!! {を入力時に自動的に左側に}を入力し、入力範囲を閉じます。
 inoremap { {}<Left>
+"!!
+"!! (を入力時に自動的に左側に)を入力し、入力範囲を閉じます。
 inoremap ( ()<Left>
+"!!
+"!! [を入力時に自動的に左側に]を入力し、入力範囲を閉じます。
 inoremap [ []<Left>
+"!!
+"!! 'を入力時に自動的に左側に'を入力し、入力範囲を閉じます。
 inoremap ' ''<Left>
+"!!
+"!! "を入力時に自動的に左側に"を入力し、入力範囲を閉じます。
 inoremap " ""<Left>
-
+"!!
+"!! jjの連続入力を<ESC>に置き換えます。(NORMALモードへ戻ります。)
 inoremap <silent> jj <ESC>
 " }}}
 

@@ -8,6 +8,8 @@ set title
 set cursorline
 set laststatus=2
 set mouse=a
+set hidden
+set autoread
 "" }
 
 "" Indent {
@@ -20,6 +22,8 @@ set list
 "" Search {
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 "" }
 
 "" Encoding {
@@ -29,6 +33,10 @@ set fileencodings=utf-8,eucjp-ms,sjis,cp932
 
 "" Clipboard {
 set clipboard=unnamed,unnamedplus
+"" }
+
+"" Color {
+
 "" }
 
 if &compatible
@@ -43,7 +51,6 @@ inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
-
 inoremap <silent> jj <ESC>
 " }}}
 
