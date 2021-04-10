@@ -1,3 +1,12 @@
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!! 注意:このinit-base.vimは、init.vimのbaseになるファイルです。
+"!! このファイルを編集するだけでは、init.vimには反映されません。
+"!! 最後に必ず、`build.sh`を実行しましょう！
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!                           __      __(_)_ __ ___  _ __ ___
+"!!                           \ \    / /  | '_ ` _ \| '__/ __|
+"!!                             \ \/ /  | | | | | | | |  | (__
+"!!                            (_) _/   |_|_| |_| |_|_|  \___|
 
 " General {{{
 
@@ -32,7 +41,7 @@ set clipboard=unnamed,unnamedplus
 "" }
 
 if &compatible
-set nocompatible
+  set nocompatible
 endif
 
 " }}}
@@ -73,7 +82,7 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
 
 "" Markdown {
 call dein#add('previm/previm')
-let g:previm_open_cmd = 'open -a Google Chrome'
+let g:previm_open_cmd = 'open -a Google\ Chrome'
 "" }
 
 "" LSP {
@@ -90,8 +99,8 @@ call dein#add('mattn/vim-goimports')
 "" }
 
 if !has('nvim')
-call dein#add('roxma/nvim-yarp')
-call dein#add('roxma/vim-hug-neovim-rpc')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
 endif
 
 call dein#end()
@@ -108,5 +117,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 " }}}
 
+"!! シンタックスハイライトを有効化 
+"!! :help :syntax-enable で内容を調べることができます。
 syntax enable
 
