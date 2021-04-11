@@ -55,14 +55,21 @@ set ignorecase
 "!!
 "!! 大文字で検索された場合、対象を大文字に限定する。
 set smartcase
+"!!
+"!! 行末まで検索を行ったら自動的に行頭に移動する。
+set wrapscan
 "" }
 
 "" Encoding {
+"!! 文字コードをUTF-8に設定する。
 set encoding=utf-8
+"!!
+"!! 出力可能な文字コードの種別を設定する。(ここに設定している文字コードは文字化けせずに出力できる。)
 set fileencodings=utf-8,eucjp-ms,sjis,cp932
 "" }
 
 "" Clipboard {
+"!! yankのバッファとクリップボードを共有する。(これにより、yankしたものを別のWindowへ, 別のWindowのコピーをVimへという動作ができる。)
 set clipboard=unnamed,unnamedplus
 "" }
 
