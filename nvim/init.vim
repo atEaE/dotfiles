@@ -3,6 +3,7 @@
 
 "" Utility {
 set nocompatible
+syntax enable
 set number
 set wildmenu
 set title
@@ -38,22 +39,25 @@ set fileencodings=utf-8,eucjp-ms,sjis,cp932
 set clipboard=unnamed,unnamedplus
 "" }
 
-"" Color {
-
-"" }
-
 " }}}
 
-" KeyMap(noremap) {{{
+" KeyMap(Insertmode map) {{{
 inoremap { {}<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
 inoremap <silent> jj <ESC>
+" }}}
 
-cnoremap <Tab> gt
-cnoremap <S-Tab> gT
+" KeyMap(Noramlmode map) {{{
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+nnoremap <S-Left> <C-w>><CR>
+nnoremap <S-Right> <C-w><<CR>
+nnoremap <S-Up> <C-w>-<CR>
+nnoremap <S-Down> <C-w>+<CR>
 " }}}
 
 " Plugins {{{
@@ -122,7 +126,4 @@ call dein#end()
 " }}}
 
 filetype plugin indent on
-
-
-syntax enable
 

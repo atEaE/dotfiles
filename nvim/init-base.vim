@@ -13,29 +13,23 @@
 "" Utility {
 "!! vi互換モードで動作させない。(vi互換モードで動作させると動かないプラグインが存在するため。)
 set nocompatible
-"!!
+"!! シンタックスハイライトを有効化する。
+syntax enable
 "!! 左側に行番を表示させます。
 set number
-"!!
 "!! 補完時に補完候補を全表示する。
 set wildmenu
-"!!
 set title
 "!! 選択している行にカーソルラインを表示します。
 set cursorline
-"!!
 "!! 行末に常にステータスバーを表示させます。
 set laststatus=2
-"!!
 "!! マウス操作を有効にします。これにより、ホイールスクロール、ファイルセレクトが可能になります。
 set mouse=a
-"!!
 "!! 複数ファイルの編集を可能にする
 set hidden
-"!!
 "!! 内容が変更された場合、自動的に再読み込み
 set autoread
-"!!
 "!! 入力中のコマンドを表示する。
 set showcmd
 "" }
@@ -43,13 +37,10 @@ set showcmd
 "" Indent {
 "!! Tab入力時にTab文字ではなく半角文字を挿入する。
 set expandtab
-"!!
 "!! Tab幅を半角スペース4に設定する。
 set tabstop=4
-"!!
 "!! 自動インデント幅を半角スペース4に設定する。
 set shiftwidth=4
-"!!
 "!! 不可視文字を表示する。
 set list
 "" }
@@ -57,16 +48,12 @@ set list
 "" Search {
 "!! 検索文字をハイライトします。
 set hlsearch
-"!!
 "!! インクリメンタルサーチ(文字が入力されるたびに検索を行う)を有効にします。
 set incsearch
-"!!
 "!! 大文字小文字を区別しない。
 set ignorecase
-"!!
 "!! 大文字で検索された場合、対象を大文字に限定する。
 set smartcase
-"!!
 "!! 行末まで検索を行ったら自動的に行頭に移動する。
 set wrapscan
 "" }
@@ -74,7 +61,6 @@ set wrapscan
 "" Encoding {
 "!! 文字コードをUTF-8に設定する。
 set encoding=utf-8
-"!!
 "!! 自動判別可能な文字コードの種別を設定する。(ここに設定している文字コードは文字化けせずに出力できる。)
 set fileencodings=utf-8,eucjp-ms,sjis,cp932
 "" }
@@ -84,34 +70,34 @@ set fileencodings=utf-8,eucjp-ms,sjis,cp932
 set clipboard=unnamed,unnamedplus
 "" }
 
-"" Color {
-
-"" }
-
 " }}}
 
-" KeyMap(noremap) {{{
-"!! {を入力時に自動的に左側に}を入力し、入力範囲を閉じます。
+" KeyMap(Insertmode map) {{{
+"!! インサートモードマップ：{を入力時に自動的に左側に}を入力し、入力範囲を閉じます。
 inoremap { {}<Left>
-"!!
-"!! (を入力時に自動的に左側に)を入力し、入力範囲を閉じます。
+"!! インサートモードマップ：(を入力時に自動的に左側に)を入力し、入力範囲を閉じます。
 inoremap ( ()<Left>
-"!!
-"!! [を入力時に自動的に左側に]を入力し、入力範囲を閉じます。
+"!! インサートモードマップ：[を入力時に自動的に左側に]を入力し、入力範囲を閉じます。
 inoremap [ []<Left>
-"!!
-"!! 'を入力時に自動的に左側に'を入力し、入力範囲を閉じます。
+"!! インサートモードマップ：'を入力時に自動的に左側に'を入力し、入力範囲を閉じます。
 inoremap ' ''<Left>
-"!!
-"!! "を入力時に自動的に左側に"を入力し、入力範囲を閉じます。
+"!! インサートモードマップ："を入力時に自動的に左側に"を入力し、入力範囲を閉じます。
 inoremap " ""<Left>
-"!!
-"!! jjの連続入力を<ESC>に置き換えます。(NORMALモードへ戻ります。)
+"!! インサートモードマップ：jjの連続入力を<ESC>に置き換えます。(NORMALモードへ戻ります。)
 inoremap <silent> jj <ESC>
+" }}}
 
-"!! <TAB>をgtに割り当てる。
-cnoremap <Tab> gt
-cnoremap <S-Tab> gT
+" KeyMap(Noramlmode map) {{{
+"!! ノーマルモードマップ：<TAB>をgtに割り当てる。
+nnoremap <Tab> gt
+"!! ノーマルモードマップ：<Shift-Tab>をgTに割り当てる。
+nnoremap <S-Tab> gT
+"!! ノーマルモードマップ：<Shift-Left>を<C-w>><CR>(画面を左に広げる)に割り当てる。
+nnoremap <S-Left>  <C-w>><CR>
+"!! ノーマルモードマップ：<Shift-Right>を<C-w><<CR>(画面を右に広げる)に割り当てる。
+nnoremap <S-Right> <C-w><<CR>
+nnoremap <S-Up>    <C-w>-<CR>
+nnoremap <S-Down>  <C-w>+<CR>
 " }}}
 
 " Plugins {{{
@@ -186,9 +172,4 @@ call dein#end()
 " }}}
 
 filetype plugin indent on
-
-
-"!! シンタックスハイライトを有効化 
-"!! :help :syntax-enable で内容を調べることができます。
-syntax enable
 
