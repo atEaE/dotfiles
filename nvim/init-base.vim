@@ -11,9 +11,15 @@
 " General {{{
 
 "" Utility {
+"!! vi互換モードで動作させない。(vi互換モードで動作させると動かないプラグインが存在するため。)
+set nocompatible
+"!!
 "!! 左側に行番を表示させます。
 set number
+"!!
+"!! 補完時に補完候補を全表示する。
 set wildmenu
+"!!
 set title
 "!! 選択している行にカーソルラインを表示します。
 set cursorline
@@ -29,6 +35,9 @@ set hidden
 "!!
 "!! 内容が変更された場合、自動的に再読み込み
 set autoread
+"!!
+"!! 入力中のコマンドを表示する。
+set showcmd
 "" }
 
 "" Indent {
@@ -40,6 +49,8 @@ set tabstop=4
 "!!
 "!! 自動インデント幅を半角スペース4に設定する。
 set shiftwidth=4
+"!!
+"!! 不可視文字を表示する。
 set list
 "" }
 
@@ -64,7 +75,7 @@ set wrapscan
 "!! 文字コードをUTF-8に設定する。
 set encoding=utf-8
 "!!
-"!! 出力可能な文字コードの種別を設定する。(ここに設定している文字コードは文字化けせずに出力できる。)
+"!! 自動判別可能な文字コードの種別を設定する。(ここに設定している文字コードは文字化けせずに出力できる。)
 set fileencodings=utf-8,eucjp-ms,sjis,cp932
 "" }
 
@@ -76,10 +87,6 @@ set clipboard=unnamed,unnamedplus
 "" Color {
 
 "" }
-
-if &compatible
-  set nocompatible
-endif
 
 " }}}
 

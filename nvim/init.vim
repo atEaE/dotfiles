@@ -2,6 +2,7 @@
 " General {{{
 
 "" Utility {
+set nocompatible
 set number
 set wildmenu
 set title
@@ -10,6 +11,7 @@ set laststatus=2
 set mouse=a
 set hidden
 set autoread
+set showcmd
 "" }
 
 "" Indent {
@@ -24,6 +26,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set wrapscan
 "" }
 
 "" Encoding {
@@ -38,10 +41,6 @@ set clipboard=unnamed,unnamedplus
 "" Color {
 
 "" }
-
-if &compatible
-set nocompatible
-endif
 
 " }}}
 
