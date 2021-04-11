@@ -108,6 +108,10 @@ inoremap " ""<Left>
 "!!
 "!! jjの連続入力を<ESC>に置き換えます。(NORMALモードへ戻ります。)
 inoremap <silent> jj <ESC>
+
+"!! <TAB>をgtに割り当てる。
+cnoremap <Tab> gt
+cnoremap <S-Tab> gT
 " }}}
 
 " Plugins {{{
@@ -118,9 +122,29 @@ call dein#begin('~/.vim/dein')
 
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/unite.vim')
+
+"" NERDTree {
 call dein#add('preservim/nerdtree')
+"!! 隠しファイルを表示します。(0に設定すると表示しません。)
+let NERDTreeShowHidden=1
+"!! フォルダ閉じアイコンを'↠'に変更します。
+let g:NERDTreeDirArrowExpandable = '↠'
+"!! フォルダ開きアイコンを'↡'に変更します。
+let g:NERDTreeDirArrowCollapsible = '↡'
+"" }
+
+"" Airline {
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+"!! Airlineテーマを'wombat'に設定
+let g:airline_theme = 'wombat'
+"!! ステータスラインにカレントブランチを表示する。
+let g:airline#extensions#branch#enabled = 1
+"!! タブラインの表示を有効にする。
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+"" }
+
 call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 call dein#add('tpope/vim-fugitive')
@@ -163,13 +187,6 @@ call dein#end()
 
 filetype plugin indent on
 
-" vim-airline/vim-airline {{{
-let g:airline_theme = 'wombat'
-
-" extensions
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-" }}}
 
 "!! シンタックスハイライトを有効化 
 "!! :help :syntax-enable で内容を調べることができます。

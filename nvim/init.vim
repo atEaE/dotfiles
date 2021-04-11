@@ -51,6 +51,9 @@ inoremap [ []<Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
 inoremap <silent> jj <ESC>
+
+cnoremap <Tab> gt
+cnoremap <S-Tab> gT
 " }}}
 
 " Plugins {{{
@@ -61,9 +64,23 @@ call dein#begin('~/.vim/dein')
 
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/unite.vim')
+
+"" NERDTree {
 call dein#add('preservim/nerdtree')
+let NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable = '↠'
+let g:NERDTreeDirArrowCollapsible = '↡'
+"" }
+
+"" Airline {
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+let g:airline_theme = 'wombat'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+"" }
+
 call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 call dein#add('tpope/vim-fugitive')
@@ -106,13 +123,6 @@ call dein#end()
 
 filetype plugin indent on
 
-" vim-airline/vim-airline {{{
-let g:airline_theme = 'wombat'
-
-" extensions
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-" }}}
 
 syntax enable
 
