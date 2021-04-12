@@ -3,7 +3,7 @@ name: Check dotfiles for ubuntu
 on : [push]
 
 jobs:
-  lint:
+  check-dotfiles:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout dotfiles

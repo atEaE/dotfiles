@@ -3,7 +3,7 @@ name: Check dotfiles for mac
 on : [push]
 
 jobs:
-  lint:
+  check-dotfiles:
     runs-on: macos-latest
     steps:
       - name: Checkout dotfiles
