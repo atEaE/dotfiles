@@ -9,5 +9,5 @@
     // == vscode neo-vim settings
     // =========================================================
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/pc5042/.config/nvim/init.vim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim"
 }
