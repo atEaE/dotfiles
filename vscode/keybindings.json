@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.focus"
+    },
+
+
+
+    // =========================================================
+    // == vscode neo-vim bindings.
+    // =========================================================
+    {
+        "command": "vscode-neovim.compositeEscape1",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
+    },
+]
