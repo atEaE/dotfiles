@@ -75,3 +75,9 @@ Pluginの参照を行う際はコマンドモードで下記のコマンドを�
 ```vim
 :Unite dein
 ```
+
+## 3. vifm(vim like file manager)のInstall
+1. Macユーザーの場合
+```sh
+brew install vifm
+```

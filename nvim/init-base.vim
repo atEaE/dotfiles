@@ -32,6 +32,7 @@ set hidden
 set autoread
 "!! 入力中のコマンドを表示する。
 set showcmd
+set shellslash
 "" }
 
 "" Indent {
@@ -88,6 +89,8 @@ inoremap <silent> jj <ESC>
 " }}}
 
 " KeyMap(Noramlmode map) {{{
+"!! ノーマルモードマップ：Ctrl-Eにマウスホイールダウンを割り当てる。
+nnoremap <CTRL-E> <ScrollWheelDown>
 "!! ノーマルモードマップ：<TAB>をgtに割り当てる。
 nnoremap <Tab> gt
 "!! ノーマルモードマップ：<Shift-Tab>をgTに割り当てる。
@@ -146,7 +149,7 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
 
 "" Markdown {
 call dein#add('previm/previm')
-let g:previm_open_cmd = 'open -a Google\ Chrome'
+let g:previm_open_cmd = 'open -a Google\\ Chrome'
 "" }
 
 "" LSP {

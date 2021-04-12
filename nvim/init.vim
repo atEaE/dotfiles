@@ -13,6 +13,7 @@ set mouse=a
 set hidden
 set autoread
 set showcmd
+set shellslash
 "" }
 
 "" Indent {
@@ -51,9 +52,9 @@ inoremap <silent> jj <ESC>
 " }}}
 
 " KeyMap(Noramlmode map) {{{
+nnoremap <CTRL-E> <ScrollWheelDown>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-
 nnoremap <S-Left> <C-w>><CR>
 nnoremap <S-Right> <C-w><<CR>
 nnoremap <S-Up> <C-w>-<CR>
@@ -100,7 +101,7 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
 
 "" Markdown {
 call dein#add('previm/previm')
-let g:previm_open_cmd = 'open -a Google Chrome'
+let g:previm_open_cmd = 'open -a Google\ Chrome'
 "" }
 
 "" LSP {

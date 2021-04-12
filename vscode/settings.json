@@ -1,0 +1,13 @@
+{
+    // =========================================================
+    // == vscode global settings
+    // =========================================================
+    "workbench.iconTheme": "vscode-icons",
+
+
+    // =========================================================
+    // == vscode neo-vim settings
+    // =========================================================
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/pc5042/.config/nvim/init.vim",
+}
