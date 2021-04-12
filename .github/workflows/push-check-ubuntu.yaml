@@ -1,0 +1,13 @@
+name: Check dotfiles for ubuntu
+
+on : [push]
+
+jobs:
+  check-dotfiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dotfiles
+        uses: actions/checkout@v1
+      
+      - name: Install dotfiles
+        run: ./install.sh

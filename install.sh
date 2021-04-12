@@ -14,3 +14,12 @@ if [ -e $VIMCONF_DIR ]; then
     fi
 fi
 
+# .gitignore_global
+GITIGNORE_GLOBAL="${HOME}/.gitignore_global"
+if [ -e $GITIGNORE_GLOBAL ]; then
+    unlink $GITIGNORE_GLOBAL
+else
+    ln -fns $DOTFILES_CURRENT_DIR/git/.gitignore_global $GITIGNORE_GLOBAL
+fi
+# set global config
+git config --global core.excludesfile ~/.gitignore_global
