@@ -134,14 +134,17 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 "" }
 
+"" Fzf {
 call dein#add('junegunn/fzf', { 'build': './install --all'})
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+"" }
+
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-commentary')
 call dein#add('ryanoasis/vim-devicons')
 
-
+call dein#add('voldikss/vim-floaterm')
 "" Template {
 call dein#add('mattn/vim-sonictemplate')
 let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
@@ -150,7 +153,7 @@ let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
 "" Markdown {
 call dein#add('previm/previm')
 let g:previm_open_cmd = 'open -a Google\\ Chrome'
-"" }
+""  }
 
 "" LSP {
 call dein#add('prabirshrestha/async.vim')
@@ -176,3 +179,4 @@ call dein#end()
 
 filetype plugin indent on
 
+nnoremap FF :<C-u>call <SID>fzf()<CR>
