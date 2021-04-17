@@ -2,7 +2,9 @@
     // =========================================================
     // == vscode global settings
     // =========================================================
-    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 11,                                    // フォントサイズを少し小さめに(default 12
+    "editor.minimap.enabled": false,                          // エディタ右側に表示されるミニマップを非表示に.
+    "workbench.iconTheme": "vscode-icons",                    // ワークベンチのアイコンに"vscode-icons"を設定する。
 
 
     // =========================================================
@@ -12,11 +14,37 @@
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
 
     // =========================================================
+    // == json settings
+    // =========================================================
+    "[json]": {
+        "editor.tabSize": 4,                                  // Tabサイズを4に設定します。
+        "editor.formatOnSave": true,                          // ファイル保存時にフォーマットを行います。
+    },
+
+    // =========================================================
+    // == markdown settings
+    // =========================================================
+    "[markdown]": {
+        "editor.trimAutoWhitespace": false,                   // Whitespaceの自動トリミングを実行しない。
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false
+    },
+
+    // =========================================================
+    // == bat file settings
+    // =========================================================
+    "[bat]": {
+        "files.encoding": "shiftjis",                         // ファイルのエンコードを"shift-jis"に設定します。
+        "files.eol": "\r\n",                                  // ファイルのEOLを"¥r¥n"に設定します。
+    },
+
+    // =========================================================
     // == go langueage settings
     // =========================================================
     "go.useLanguageServer": true,                             // golang langusage serverを使用します。
     "[go]": {
-        "editor.formatOnPaste": true,                         // ファイル保存時にフォーマットを行います。
+        "editor.tabSize": 4,                                  // Tabサイズを4に設定します。
+        "editor.formatOnSave": true,                          // ファイル保存時にフォーマットを行います。
         "editor.codeActionsOnSave": {                         // ファイル保存時のCode Actionを設定します。
             "source.organizeImports": true,                   // 自動的にimportを補完します。
         }
@@ -25,6 +53,6 @@
         "ui.completion.usePlaceholders": false,               // 関数補完時にプレースホルダーを挿入しません。
         "ui.diagnostic.staticcheck": true,                    // ※実験的パラメータ 静的解析を有効にします。
         "ui.documentation.hoverKind": "FullDocumentation",    // ホバーテキストには、全情報を表示します。
-        "ui.documentation.linksInHover": true                 // ホバーテキストからドキュメントへのリンクを有効にします。
-    }
+        "ui.documentation.linksInHover": true,                // ホバーテキストからドキュメントへのリンクを有効にします。
+    },
 }
