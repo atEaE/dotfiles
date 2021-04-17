@@ -11,5 +11,10 @@ Ansibleは、Python2(ver2.7)もしくは、Python3(ver3.5)がインストール�
 
 1. `pip`のUpgrade
    ```sh
-   pip install --upgrade pip
+   pip3 install --upgrade pip
+   ```
+
+2. `ansible`のInstall
+   ```sh
+   pip install --user ansible
    ```

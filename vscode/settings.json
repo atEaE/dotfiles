@@ -9,5 +9,22 @@
     // == vscode neo-vim settings
     // =========================================================
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim"
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
+
+    // =========================================================
+    // == go langueage settings
+    // =========================================================
+    "go.useLanguageServer": true,                             // golang langusage serverを使用します。
+    "[go]": {
+        "editor.formatOnPaste": true,                         // ファイル保存時にフォーマットを行います。
+        "editor.codeActionsOnSave": {                         // ファイル保存時のCode Actionを設定します。
+            "source.organizeImports": true,                   // 自動的にimportを補完します。
+        }
+    },
+    "gopls": {
+        "ui.completion.usePlaceholders": false,               // 関数補完時にプレースホルダーを挿入しません。
+        "ui.diagnostic.staticcheck": true,                    // ※実験的パラメータ 静的解析を有効にします。
+        "ui.documentation.hoverKind": "FullDocumentation",    // ホバーテキストには、全情報を表示します。
+        "ui.documentation.linksInHover": true                 // ホバーテキストからドキュメントへのリンクを有効にします。
+    }
 }

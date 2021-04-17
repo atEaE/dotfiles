@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "editorconfig.editorconfig",
+        "mhutchie.git-graph",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "golang.go",
+        "ms-vsliveshare.vsliveshare",
+        "yzhang.markdown-all-in-one",
+        "asvetliakov.vscode-neovim",
+        "davidanson.vscode-markdownlint"
+    ]
+}

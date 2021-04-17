@@ -10,7 +10,7 @@ if [ -e $VIMCONF_DIR ]; then
     if [ -e $VIMCONF_FILE ]; then
         unlink $VIMCONF_DIR/init.vim
     else
-        ln -fns $DOTFILES_CURRENT_DIR/nvim/init.vim $VIMCONF_FILE
+        ln -fns $DOTFILES_CURRENT_DIR/vim/init.vim $VIMCONF_FILE
     fi
 fi
 
