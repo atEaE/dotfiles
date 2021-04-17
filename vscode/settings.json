@@ -2,15 +2,43 @@
     // =========================================================
     // == vscode global settings
     // =========================================================
-    "editor.fontSize": 11,                                    // フォントサイズを少し小さめに(default: 12)
-    "editor.minimap.enabled": false,                          // エディタ右側に表示されるミニマップを非表示に.
-    "editor.cursorBlinking": "expand",                        // カーソル待機時にカーソルをExpandさせる。(default: blink)
-    "editor.scrollBeyondLastLine": false,                     // 最後のラインを越えて、スクロールしない。
-    "files.associations": {
-        "*.txt": "markdown",                                  // ファイル関連付の設定: *.txtファイルは"markdown"の設定を適用する。
-        "*.json.txt": "json"                                  // ファイル関連付の設定: *.json.txtは"json"の設定を適用する。
-    },
+    /* window settings */
+    "window.closeWhenEmpty": false,                           // 最後のエディをCloseした時に、VSCodeを閉じない。
+    "breadcrumbs.enabled": true,                              // ファイルパンくずの表示をする。
     "workbench.iconTheme": "vscode-icons",                    // ワークベンチのアイコンに"vscode-icons"を設定する。
+
+    /* editor settings */
+    "editor.lineNumbers": "on",                               // 行番号を表示します。(default: on)
+    "editor.fontSize": 11,                                    // フォントサイズを少し小さめに(default: 12)
+    "editor.folding": true,                                   // コードの折りたたみを許可する。
+    "editor.detectIndentation": true,                         // ファイル種別に基づいて、インデントとタブの設定を変更する。
+    "editor.minimap.enabled": false,                          // エディタ右側に表示されるミニマップを非常時に設定する。
+    "editor.roundedSelection": false,                         // 選択範囲の角を丸めない。
+    "editor.cursorStyle": "line",                             // カーソルのスタイルを変更する。(default: line)
+    "editor.cursorBlinking": "expand",                        // カーソル待機時にカーソルをExpandさせる。(default: blink)
+    "editor.letterSpacing": 0.1,                              // 文字間隔を0.1に設定。(default: 0)
+    "editor.scrollBeyondLastLine": false,                     // 最後のラインを越えて、スクロールしない。
+    "editor.snippetSuggestions": "top",                       // snippetのサジェストを先頭に表示する。
+    "editor.links": true,                                     // Linkのクリックを可能にする。
+
+    /* files settings */
+    "files.trimTrailingWhitespace": true,                     // Whitespaceの自動トリミングする。
+    "files.autoGuessEncoding": true,                          // 文字コードの自動判別を有効化する。
+    "files.exclude": {
+        "**/.git": true,                                      // 除外ファイルの設定: .gitの除外
+        "**/.svn": true,                                      // 除外ファイルの設定: .svnの除外
+        "**/.hg": true,                                       // 除外ファイルの設定: .hgの除外
+        "**/CVS": true,                                       // 除外ファイルの設定: CVSの除外
+        "**/.DS_Store": true                                  // 除外ファイルの設定: .DS_Storeの除外
+    },
+    "files.associations": {
+        "*.txt": "markdown",                                  // ファイル関連付けの設定: *.txtファイルは"markdown"の設定を適用する。
+        "*.json.txt": "json",                                 // ファイル関連付けの設定: *.json.txtは"json"の設定を適用する。
+        "*.html.tmpl": "html"                                 // ファイル関連付けの設定: *.html.tmplは"html"の設定を適用する。
+    },
+
+    /* extensions settings */
+    "extensions.autoUpdate": true,                            // 拡張機能を自動的に更新します。
 
 
     // =========================================================
@@ -18,6 +46,30 @@
     // =========================================================
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
+
+    // =========================================================
+    // == html settings
+    // =========================================================
+    "[html]": {
+        "editor.tabSize": 2,                                  // Tabサイズを2に設定します。
+        "editor.insertSpaces": true,                          // Tabキーの入力を半角スペースに置き換えます。
+    },
+
+    // =========================================================
+    // == css settings
+    // =========================================================
+    "[css]": {
+        "editor.tabSize": 2,                                  // Tabサイズを2に設定します。
+        "editor.insertSpaces": true,                          // Tabキーの入力を半角スペースに置き換えます。
+    },
+
+    // =========================================================
+    // == scss settings
+    // =========================================================
+    "[scss]": {
+        "editor.tabSize": 2,                                  // Tabサイズを2に設定します。
+        "editor.insertSpaces": true,                          // Tabキーの入力を半角スペースに置き換えます。
+    },
 
     // =========================================================
     // == json settings
@@ -37,7 +89,15 @@
     },
 
     // =========================================================
-    // == bat file settings
+    // == makefile settings
+    // =========================================================
+    "[makefile]": {
+        "editor.tabSize": 4,                                  // Tabサイズを4に設定します。
+        "editor.insertSpaces": false                          // Tabキーの入力を半角スペースに置き換えない。
+    },
+
+    // =========================================================
+    // == batfile settings
     // =========================================================
     "[bat]": {
         "files.encoding": "shiftjis",                         // ファイルのエンコードを"shift-jis"に設定します。
