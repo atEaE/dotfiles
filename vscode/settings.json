@@ -2,8 +2,14 @@
     // =========================================================
     // == vscode global settings
     // =========================================================
-    "editor.fontSize": 11,                                    // フォントサイズを少し小さめに(default 12
+    "editor.fontSize": 11,                                    // フォントサイズを少し小さめに(default: 12)
     "editor.minimap.enabled": false,                          // エディタ右側に表示されるミニマップを非表示に.
+    "editor.cursorBlinking": "expand",                        // カーソル待機時にカーソルをExpandさせる。(default: blink)
+    "editor.scrollBeyondLastLine": false,                     // 最後のラインを越えて、スクロールしない。
+    "files.associations": {
+        "*.txt": "markdown",                                  // ファイル関連付の設定: *.txtファイルは"markdown"の設定を適用する。
+        "*.json.txt": "json"                                  // ファイル関連付の設定: *.json.txtは"json"の設定を適用する。
+    },
     "workbench.iconTheme": "vscode-icons",                    // ワークベンチのアイコンに"vscode-icons"を設定する。
 
 
@@ -26,7 +32,7 @@
     // =========================================================
     "[markdown]": {
         "editor.trimAutoWhitespace": false,                   // Whitespaceの自動トリミングを実行しない。
-        "editor.wordWrap": "on",
+        "editor.wordWrap": "on",                              // 右端で文字の折り返しを有効にする。
         "editor.quickSuggestions": false
     },
 
