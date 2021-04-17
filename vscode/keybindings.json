@@ -1,18 +1,80 @@
 [
-    {
-        "key": "ctrl+t",
-        "command": "workbench.action.terminal.focus"
-    },
-
-
-
     // =========================================================
     // == vscode neo-vim bindings.
     // =========================================================
     {
-        "command": "vscode-neovim.compositeEscape1",
+        // -- エディタにフォーカスしていて、かつInsertモードの場合、Normalモードへ移行する。
         "key": "j",
+        "command": "vscode-neovim.compositeEscape1",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "j"
+    },
+    {
+        // -- エディタにフォーカスしていて、かつNormalモードの場合、次のタブへ進む。
+        "key": "tab",
+        "command": "workbench.action.nextEditor",
+        "when": "neovim.mode == normal && editorFocus"
+    },
+    {
+        // -- エディタにフォーカスしていて、かつNormalモードの場合、前のタブへ戻る。
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditor",
+        "when": "neovim.mode == normal && editorFocus"
+    },
+    {
+        // -- エディタにフォーカスしていて、かつNormalモードの場合、ターミナルへ移動する。
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.focus",
+        "when": "neovim.mode == normal && editorFocus",
+    },
+    {
+        // -- ターミナルにフォーカスしている場合、Activeエディタへ移動する。
+        "key": "ctrl+w",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+
+    // ========== Explorer ==========
+    {
+        // -- Listに対して、フォーカスが当たっている場合、下へ移動する。
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、上へ移動する。
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、トグルを折りたたむ。
+        "key": "h",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、トグルを開く。
+        "key": "l",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、先頭へ移動する。
+        "key": "g g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、最後へ移動する。
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // -- Listに対して、フォーカスが当たっている場合、キーボードナビゲーションを有効にします。(キーボードナビゲーションの設定はsettings.jsonに依存します。)
+        "key": "/",
+        "command": "list.toggleKeyboardNavigation",
+        "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
     },
 ]

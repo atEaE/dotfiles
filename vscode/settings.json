@@ -12,6 +12,8 @@
     "workbench.activityBar.visible": true,                                  // サイドバー内のアクティビティバーの表示を有効にします。(default:)
     "workbench.statusBar.visible": true,                                    // Workbenchの下端にステータスバーを表示します。(default: true)
     "workbench.editor.showTabs": true,                                      // タブの表示を有効化します。(default: true)
+    "workbench.list.automaticKeyboardNavigation": false,                    // Workbench上のListで機能するキーボードナビゲーションを無効にします。
+    "workbench.list.keyboardNavigation": "filter",                          // キーボードナビケーション有効時、対象をフィルタリングします。
 
     /* ========== Editor ========== */
     "editor.lineNumbers": "on",                                             // 行番号を表示します。(default: on)
@@ -111,6 +113,7 @@
     /* ========== JSON ========== */
     "[json]": {
         "editor.tabSize": 4,                                                // Tabサイズを4に設定します。
+        "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
         "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
     },
 
