@@ -31,7 +31,7 @@
     // ========== Editor ==========
     {
         // -- エディタにフォーカスしていて、かつInsertモードの場合、Normalモードへ移行する。
-        "key": "j",
+       "key": "j",
         "command": "vscode-neovim.compositeEscape1",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "j"
@@ -91,5 +91,29 @@
         "key": "/",
         "command": "list.toggleKeyboardNavigation",
         "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
+    },
+    {
+        // -- ExplorerがVisibleでかつフォーカスが当たっている場合、新しいファイルを作成する。
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus  && explorerViewletVisible && !inputFocus"
+    },
+    {
+        // -- ExplorerがVisibleでかつフォーカスが当たっている場合、新しいフォルダを作成する。
+        "key": "f",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus  && explorerViewletVisible && !inputFocus"
+    },
+    {
+        // -- ExplorerがVisibleでかつフォーカスが当たっている場合、ファイルを削除する。
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus  && explorerViewletVisible && !inputFocus"
+    },
+    {
+        // -- ExplorerがVisibleでかつフォーカスが当たっている場合、OSのファイルエクスプローラーを開く。
+        "key": "e",
+        "command": "revealFileInOS",
+        "when": "explorerViewletFocus  && explorerViewletVisible && !inputFocus"
     },
 ]
