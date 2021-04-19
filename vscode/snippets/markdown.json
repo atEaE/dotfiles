@@ -1,0 +1,16 @@
+{
+    "daily_scrum": {
+        "prefix": "ds",
+        "body": [
+            "## 昨日やったことは?",
+            "- task1",
+            "",
+            "## 今日やることは?",
+            "- task1",
+            "",
+            "## 相談・その他の連絡事項はある?",
+            "- etc..",
+        ],
+        "description": "Daily Scrum Meeting"
+    },
+}
