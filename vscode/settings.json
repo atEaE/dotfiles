@@ -43,7 +43,8 @@
     "files.associations": {
         "*.txt": "markdown",                                                // ファイル関連付けの設定: *.txtファイルは"markdown"の設定を適用する。
         "*.json.txt": "json",                                               // ファイル関連付けの設定: *.json.txtは"json"の設定を適用する。
-        "*.html.tmpl": "html"                                               // ファイル関連付けの設定: *.html.tmplは"html"の設定を適用する。
+        "*.html.tmpl": "html",                                              // ファイル関連付けの設定: *.html.tmplは"html"の設定を適用する。
+        "*.yml": "yaml",                                                    // ファイル関連付けの設定: *.ymlは"yaml"の設定を適用する。
     },
 
     // =========================================================
@@ -128,6 +129,7 @@
         "editor.tabSize": 2,                                                // Tabサイズを2に設定します。
         "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
         "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
+        "editor.formatOnSaveMode": "file"                                   // ファイル保存時のフォーマットはファイルに対して実行します。
     },
 
     /* ========== Markdown ========== */
