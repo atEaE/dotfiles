@@ -40,7 +40,7 @@
         "**/CVS": true,                                                     // 除外ファイルの設定: CVSの除外
         "**/.DS_Store": true                                                // 除外ファイルの設定: .DS_Storeの除外
     },
-    "files.associations": {
+    "files.associations": {                                                 // ファイル関連付けの設定
         "*.txt": "markdown",                                                // ファイル関連付けの設定: *.txtファイルは"markdown"の設定を適用する。
         "*.json.txt": "json",                                               // ファイル関連付けの設定: *.json.txtは"json"の設定を適用する。
         "*.html.tmpl": "html",                                              // ファイル関連付けの設定: *.html.tmplは"html"の設定を適用する。
@@ -159,4 +159,11 @@
         }
     },
     "go.toolsManagement.autoUpdate": true,
+
+    /* ========== TypeScript ========== */
+    "[typescript]": {
+        "editor.tabSize": 2,                                                // Tabサイズを4に設定します。
+        "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
+        "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
+    }
 }
