@@ -52,3 +52,18 @@ VSCodeは、`workspace`別もしくは、`user(global`に設定ファイルを�
 | :--------- | :----------------------------- |
 |  w         | ActiveEditor Save              |
 |  wq        | ActiveEditor Save & Close      |
+
+## Neovim Extensinos追加時のエラー回避について
+
+Neovim ExtensionsをInstallした際に、InstallされているNeovimのVersionによっては、拡張機能がただしく機能しない場合がある。  
+2021/5/5現在では、`v0.5.0-nightly`以上が推奨されているため注意が必要。
+
+```sh
+# brewでInstallしているNeovimのUninstall
+brew unlink neovim
+brew uninstall neovim
+
+# neovimのリポジトリからHEADを直接Install
+brew install --HEAD neovim
+
+```
