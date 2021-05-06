@@ -39,13 +39,13 @@
     {
         // -- エディタにフォーカスしていて、かつNormalモードの場合、次のタブへ進む。
         "key": "tab",
-        "command": "workbench.action.nextEditor",
+        "command": "workbench.action.nextEditorInGroup",
         "when": "neovim.mode == normal && editorFocus"
     },
     {
         // -- エディタにフォーカスしていて、かつNormalモードの場合、前のタブへ戻る。
         "key": "shift+tab",
-        "command": "workbench.action.previousEditor",
+        "command": "workbench.action.previousEditorInGroup",
         "when": "neovim.mode == normal && editorFocus"
     },
 
