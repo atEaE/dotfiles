@@ -44,7 +44,7 @@
         "*.txt": "markdown",                                                // ファイル関連付けの設定: *.txtファイルは"markdown"の設定を適用する。
         "*.json.txt": "json",                                               // ファイル関連付けの設定: *.json.txtは"json"の設定を適用する。
         "*.html.tmpl": "html",                                              // ファイル関連付けの設定: *.html.tmplは"html"の設定を適用する。
-        "*.yml": "yaml",                                                    // ファイル関連付けの設定: *.ymlは"yaml"の設定を適用する。
+        "*.yml": "yaml"                                                     // ファイル関連付けの設定: *.ymlは"yaml"の設定を適用する。
     },
 
     // =========================================================
@@ -63,6 +63,8 @@
         ],
         "compounds": []
     },
+
+
 
     // =========================================================
     // == extensions settings
@@ -93,7 +95,7 @@
         "ui.completion.usePlaceholders": false,                             // 関数補完時にプレースホルダーを挿入しません。
         "ui.diagnostic.staticcheck": true,                                  // ※実験的パラメータ 静的解析を有効にします。
         "ui.documentation.hoverKind": "FullDocumentation",                  // ホバーテキストには、全情報を表示します。
-        "ui.documentation.linksInHover": true,                              // ホバーテキストからドキュメントへのリンクを有効にします。
+        "ui.documentation.linksInHover": true                               // ホバーテキストからドキュメントへのリンクを有効にします。
     },
 
     // =========================================================
@@ -102,26 +104,26 @@
     /* ========== HTML ========== */
     "[html]": {
         "editor.tabSize": 2,                                                // Tabサイズを2に設定します。
-        "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
+        "editor.insertSpaces": true                                         // Tabキーの入力を半角スペースに置き換えます。
     },
 
     /* ========== CSS ========== */
     "[css]": {
         "editor.tabSize": 2,                                                // Tabサイズを2に設定します。
-        "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
+        "editor.insertSpaces": true                                         // Tabキーの入力を半角スペースに置き換えます。
     },
 
     /* ========== SCSS ========== */
     "[scss]": {
         "editor.tabSize": 2,                                                // Tabサイズを2に設定します。
-        "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
+        "editor.insertSpaces": true                                         // Tabキーの入力を半角スペースに置き換えます。
     },
 
     /* ========== JSON ========== */
     "[json]": {
         "editor.tabSize": 4,                                                // Tabサイズを4に設定します。
         "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
-        "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
+        "editor.formatOnSave": true                                         // ファイル保存時にフォーマットを行います。
     },
 
     /* ========== YAML ========== */
@@ -135,7 +137,7 @@
     /* ========== Markdown ========== */
     "[markdown]": {
         "editor.trimAutoWhitespace": false,                                 // Whitespaceの自動トリミングを実行しない。
-        "editor.wordWrap": "on",                                            // 右端で文字の折り返しを有効にする。
+        "editor.wordWrap": "on"                                             // 右端で文字の折り返しを有効にする。
     },
 
     /* ========== Makefile ========== */
@@ -143,11 +145,15 @@
         "editor.tabSize": 4,                                                // Tabサイズを4に設定します。
         "editor.insertSpaces": false                                        // Tabキーの入力を半角スペースに置き換えない。
     },
+    "markdownlint.config": {
+        "default": true,                                                    // MarkdownLint: Defaultで有効に。
+        "MD024": false                                                      // MarkdownLint: MD024は適用しない。(同名のヘッドタグがある場合にWarning検知しない。)
+    },
 
     /* ========== Batfile ========== */
     "[bat]": {
         "files.encoding": "shiftjis",                                       // ファイルのエンコードを"shift-jis"に設定します。
-        "files.eol": "\r\n",                                                // ファイルのEOLを"¥r¥n"に設定します。
+        "files.eol": "\r\n"                                                 // ファイルのEOLを"¥r¥n"に設定します。
     },
 
     /* ========== Golang ========== */
@@ -155,7 +161,7 @@
         "editor.tabSize": 4,                                                // Tabサイズを4に設定します。
         "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
         "editor.codeActionsOnSave": {                                       // ファイル保存時のCode Actionを設定します。
-            "source.organizeImports": true,                                 // 自動的にimportを補完します。
+            "source.organizeImports": true                                  // 自動的にimportを補完します。
         }
     },
     "go.toolsManagement.autoUpdate": true,
@@ -164,6 +170,14 @@
     "[typescript]": {
         "editor.tabSize": 2,                                                // Tabサイズを4に設定します。
         "editor.insertSpaces": true,                                        // Tabキーの入力を半角スペースに置き換えます。
-        "editor.formatOnSave": true,                                        // ファイル保存時にフォーマットを行います。
-    }
+        "editor.formatOnSave": true                                         // ファイル保存時にフォーマットを行います。
+    },
+
+    // =========================================================
+    // == framework settings
+    // =========================================================    
+    
+    /* ========== Mono ========== */
+    "omnisharp.monoPath": "/Library/Frameworks/Mono.framework/Versions/Current",
+    "omnisharp.useGlobalMono": "always"
 }
