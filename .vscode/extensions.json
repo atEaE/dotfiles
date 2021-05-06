@@ -1,14 +1,16 @@
 {
     "recommendations": [
-        "ms-azuretools.vscode-docker",
-        "editorconfig.editorconfig",
-        "mhutchie.git-graph",
-        "codezombiech.gitignore",
-        "eamodio.gitlens",
-        "golang.go",
-        "ms-vsliveshare.vsliveshare",
-        "yzhang.markdown-all-in-one",
-        "asvetliakov.vscode-neovim",
-        "davidanson.vscode-markdownlint"
+        "ms-azuretools.vscode-docker",                         // https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+        "editorconfig.editorconfig",                           // https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+        "mhutchie.git-graph",                                  // https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph
+        "codezombiech.gitignore",                              // https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore
+        "eamodio.gitlens",                                     // https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+        "golang.go",                                           // https://marketplace.visualstudio.com/items?itemName=golang.Go
+        "ms-vsliveshare.vsliveshare",                          // https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare
+        "yzhang.markdown-all-in-one",                          // https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+        "asvetliakov.vscode-neovim",                           // https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim
+        "ateae.fuzzy-bookmarks",                               // https://marketplace.visualstudio.com/items?itemName=atEaE.fuzzy-bookmarks
+        "davidanson.vscode-markdownlint",                      // https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+        "shd101wyy.markdown-preview-enhanced",                 // https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced
     ]
 }
