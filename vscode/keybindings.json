@@ -7,13 +7,13 @@
         // -- エディタにフォーカスしていて、かつNormalモードの場合、サイドバーへ移動する。
         "key": "ctrl+w ctrl+w",
         "command": "workbench.action.focusSideBar",
-        "when": "neovim.mode == normal && editorFocus",
+        "when": "neovim.mode == normal && editorFocus"
     },
     {
         // -- サイトバーにフォーカスしている場合、エディタへ移動する。
         "key": "ctrl+w ctrl+w",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus",
+        "when": "sideBarFocus"
     },
     {
         // -- Terminalにフォーカスしている場合、Activeエディタへ移動する。
@@ -25,7 +25,7 @@
         // -- エディタにフォーカスしていて、かつNormalモードの場合、Terminalへ移動する。
         "key": "ctrl+w .",
         "command": "workbench.action.terminal.focus",
-        "when": "neovim.mode == normal && editorFocus",
+        "when": "neovim.mode == normal && editorFocus"
     },
 
     // ========== Editor ==========
@@ -115,5 +115,5 @@
         "key": "e",
         "command": "revealFileInOS",
         "when": "explorerViewletFocus  && explorerViewletVisible && !inputFocus"
-    },
+    }
 ]
