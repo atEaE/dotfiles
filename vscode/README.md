@@ -17,41 +17,49 @@ VSCodeは、`workspace`別もしくは、`user(global`に設定ファイルを�
 
 ### 全モード共通Mapping
 
-|    key     |             action             |
-| :--------- | :----------------------------- |
-| ctrl + p   | Suggestion Prev(Up)            |
-| ctrl + n   | Suggestion Next(Down)          |
-| ctrl + p   | QuickAccess Prev(Up)           |
-| ctrl + n   | QuickAccess Next(Down)         |
-| ctrl + p   | CommandPallet Prev(Up)         |
-| ctrl + n   | CommandPallet Next(Down)       |
+| key      | action                   |
+| :------- | :----------------------- |
+| ctrl + p | Suggestion Prev(Up)      |
+| ctrl + n | Suggestion Next(Down)    |
+| ctrl + p | QuickAccess Prev(Up)     |
+| ctrl + n | QuickAccess Next(Down)   |
+| ctrl + p | CommandPallet Prev(Up)   |
+| ctrl + n | CommandPallet Next(Down) |
 
 ### InsertモードMapping
 
-|    key     |             action             |
-| :--------- | :----------------------------- |
-|  k         | Cursor Up                      |
-|  j         | Cursor Down                    |
-|  h         | Cursor Left                    |
-|  l         | Cursor Right                   |
-|  j j       | InsertモードからNormalモードへ    |
-|  Esc       | InsertモードからNormalモードへ    |
+| key  | action                         |
+| :--- | :----------------------------- |
+| k    | Cursor Up                      |
+| j    | Cursor Down                    |
+| h    | Cursor Left                    |
+| l    | Cursor Right                   |
+| j j  | InsertモードからNormalモードへ |
+| Esc  | InsertモードからNormalモードへ |
 
 ### NormalモードMapping
 
-|    key     |             action             |
-| :--------- | :----------------------------- |
-|  y y       | 1行 Yank(Copy)                 |
-|  p         | 次の行にPut(Paste)              |
-|  shift + p | 上の行にPut(Paste)              |
-|  d d       | 1行 Delete(Cut)                |
+| key       | action                                           |
+| :-------- | :----------------------------------------------- |
+| y y       | 1行 Yank(Copy)                                   |
+| p         | 次の行にPut(Paste)                               |
+| shift + p | 上の行にPut(Paste)                               |
+| d d       | 1行 Delete(Cut)                                  |
+| r         | カーソル下の文字を置き換える(Replace)            |
+| shift + r | 置換モードに移行する。(EscでNへ)                 |
+| w         | wordsの前方に移動. (word由来)                    |
+| e         | words前方の単語の終わりに移動 (由来はend of word) |
+| b         | words後方の単語の終わりに移動 (由来はbackword) |
+| g g       | Editorの先頭へ移動 |
+| shift + g | Editorの終末へ移動 |
 
 ### CommandモードMapping
 
-|    key     |             action             |
-| :--------- | :----------------------------- |
-|  w         | ActiveEditor Save              |
-|  wq        | ActiveEditor Save & Close      |
+| key  | action                    |
+| :--- | :------------------------ |
+| w    | ActiveEditor Save         |
+| wq   | ActiveEditor Save & Close |
+| e    | QuickAccess Open          |
 
 ## Neovim Extensinos追加時のエラー回避について
 
