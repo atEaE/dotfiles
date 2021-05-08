@@ -30,6 +30,7 @@
     "editor.scrollBeyondLastLine": false,                                                // 最後のラインを越えて、スクロールしない。(default: true)
     "editor.snippetSuggestions": "top",                                                  // snippetのサジェストを先頭に表示する。
     "editor.links": true,                                                                // Linkのクリックを可能にする。(default: true)
+    "editor.lightbulb.enabled": true,                                                    // CodeActionを有効にする。
 
     /* ========== Files ========== */
     "files.autoGuessEncoding": true,                                                     // 文字コードの自動判別を有効化する。
@@ -165,6 +166,14 @@
         }
     },
     "go.toolsManagement.autoUpdate": true,
+
+    /* ========== C# ========== */
+    "[csharp]": {
+        "editor.tabSize": 4,                                                             // Tabサイズを4に設定します。
+        "editor.formatOnSave": true,                                                     // ファイル保存時にフォーマットを行います。
+        "editor.showUnused": true,                                                       // 使用されていないコードの表示を薄くします。
+        "editor.inlineHints.enabled": true                                               // インラインヒントの有効化
+    },
 
     /* ========== TypeScript ========== */
     "[typescript]": {
