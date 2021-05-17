@@ -1,8 +1,11 @@
-# Vim 
+# Vim
+
 `vim` と `neovim`用の設定ファル情報を管理します。
 
 ## Plugin Manager のInstall
+
 ### 1.Dein.vimのInstall
+
 Plugin ManagerはDein.vimを使用します。下記の方法でInstallしてください。
 
 ```shell
@@ -11,6 +14,7 @@ sh /tmp/installer.sh ~/.vim/dein
 ```
 
 ### 2. `.vimrc` or `.vim.init`にスクリプトを追加
+
 自前の設定ファイルを持っている方は不要です。  
 下記のスクリプトを追加する。(最新のスクリプトは[こちら](https://github.com/Shougo/dein.vim/blob/master/README.md)を確認する。)
 
