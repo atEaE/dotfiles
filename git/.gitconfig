@@ -1,0 +1,6 @@
+[alias]
+	sw = checkout
+	st = status
+	cm = commit
+	fp = fetch --prune
+	rb = rebase
