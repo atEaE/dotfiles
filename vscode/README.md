@@ -3,6 +3,11 @@
 VSCodeは、`workspace`別もしくは、`user(global`に設定ファイルを持つことができる。  
 使用するOSによって、格納場所が異なるため注意する。最新の情報は、[こちらの公式サイト](https://code.visualstudio.com/docs/getstarted/setting)の情報を参考にする。  
 
+## 設定ファイルの同期
+
+設定ファイルの同期は、VSCodeに標準で搭載された[Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)を使用すること。  
+注意点として、同期前に`settings.json`や`keybindins.json`を大幅に変更してしまうと、Mergeおよび同期が不可能になってしまうため、VSCodeのSetupを行う際はまず第一に、設定ファイルの同期を行うこと。　　
+
 ## 設定ファイルの配置場所
 
 - Windows : `%APPDATA%\Code\User\settings.json`
