@@ -4,3 +4,4 @@
 	cm = commit
 	fp = fetch --prune
 	rb = rebase
+	pf = --force-with-lease
