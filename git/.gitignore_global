@@ -2,3 +2,4 @@
 .envrc
 .vscode
 .local
+__pycache__
