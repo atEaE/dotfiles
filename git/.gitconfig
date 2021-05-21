@@ -1,12 +1,18 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = code --wait
-
+[pull]
+	rebase = true
+[merge]
+	ff = false
 [alias]
 	sw = checkout
 	st = status
 	cm = commit
 	fp = fetch --prune
 	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbs = rebase --skip
 	pf = --force-with-lease
 	tree = log --graph --pretty=format:'%x09%C(auto) %h %x09%C(auto)%s %d'
