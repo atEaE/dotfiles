@@ -16,9 +16,13 @@ VSCodeは、`workspace`別もしくは、`user(global`に設定ファイルを�
 
 設定ファイルが保存されているフォルダには、`keybidings.json`も合わせて配置できる
 
-## Neovim拡張用のKeyMapping
+## Neovim拡張との併用を踏まえてKeymapping
 
-### [Mac Keymappimg]
+### VSCode標準ショートカット
+
+| key     | action                    |
+| :------ | :------------------------ |
+| cmd + : | パンくずリストにFocusする |
 
 ### 全モード共通Mapping
 
@@ -44,19 +48,21 @@ VSCodeは、`workspace`別もしくは、`user(global`に設定ファイルを�
 
 ### NormalモードMapping
 
-| key       | action                                           |
-| :-------- | :----------------------------------------------- |
-| y y       | 1行 Yank(Copy)                                   |
-| p         | 次の行にPut(Paste)                               |
-| shift + p | 上の行にPut(Paste)                               |
-| d d       | 1行 Delete(Cut)                                  |
-| r         | カーソル下の文字を置き換える(Replace)            |
-| shift + r | 置換モードに移行する。(EscでNへ)                 |
-| w         | wordsの前方に移動. (word由来)                    |
+| key       | action                                            |
+| :-------- | :------------------------------------------------ |
+| y y       | 1行 Yank(Copy)                                    |
+| p         | 次の行にPut(Paste)                                |
+| shift + p | 上の行にPut(Paste)                                |
+| d d       | 1行 Delete(Cut)                                   |
+| r         | カーソル下の文字を置き換える(Replace)             |
+| shift + r | 置換モードに移行する。(EscでNへ)                  |
+| w         | wordsの前方に移動. (word由来)                     |
 | e         | words前方の単語の終わりに移動 (由来はend of word) |
-| b         | words後方の単語の終わりに移動 (由来はbackword) |
-| g g       | Editorの先頭へ移動 |
-| shift + g | Editorの終末へ移動 |
+| b         | words後方の単語の終わりに移動 (由来はbackword)    |
+| g g       | Editorの先頭へ移動                                |
+| shift + g | Editorの終末へ移動                                |
+| /         | 前方検索                                          |
+| ?         | 後方検索 (Shift + /なので"/"逆と覚える)           |
 
 ### CommandモードMapping
 
