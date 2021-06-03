@@ -8,11 +8,12 @@
 [alias]
 	sw = checkout
 	st = status
-	cm = commit
+	cm = commit -m
 	fp = fetch --prune
 	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbs = rebase --skip
 	pf = --force-with-lease
+	cm-ini = commit --allow-empty -m
 	tree = log --graph --pretty=format:'%x09%C(auto) %h %x09%C(auto)%s %d'
