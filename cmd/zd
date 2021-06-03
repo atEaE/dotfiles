@@ -1,0 +1,11 @@
+#!/bin/s
+
+# --------------------------------------
+# -- Name : fZf Change directory
+# -- Requirement :
+# -- * fzf
+# -- * zsh
+# -- Author : atEaE
+# --------------------------------------
+
+ch $(find . -name "*" -type d | fzf)
