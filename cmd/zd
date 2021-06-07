@@ -8,4 +8,4 @@
 # -- Author : atEaE
 # --------------------------------------
 
-ch $(find . -name "*" -type d | fzf)
+cd $(find . -name "*" -type d | fzf)
