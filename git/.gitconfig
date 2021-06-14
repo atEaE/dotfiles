@@ -14,7 +14,9 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbs = rebase --skip
-	pf = push --force-with-lease
+	phf = push --force-with-lease
+	pl = pull
+	plr = pull --rebase
 	cm-ini = commit --allow-empty -m
 	tree = log --graph --pretty=format:'%x09%C(auto) %h %x09%C(auto)%s %d'
 	aliases = config --get-regexp alias
