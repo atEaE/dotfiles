@@ -8,4 +8,11 @@
 # -- Author : atEaE
 # --------------------------------------
 
-cd $(find . -name "*" -type d | fzf)
+function fzfcd() {
+	local dir
+	dir=$(find ${1:-.} -path '*/\.*' -prune \
+					-o -type d -print 2> /dev/null | fzf +m) &&
+	cd "$dir"
+}
+
+fzfcd
